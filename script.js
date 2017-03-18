@@ -36,7 +36,7 @@ function storePosition(position)
 function getLocations()
 {
   var request = new XMLHttpRequest();
-  request.open('GET', db_url.ip+db_url.port, false);
+  request.open('GET', db_url.ip+db_url, false);
   request.onload = function ()
   {
     if (request.status >= 200 && request.status < 400)
