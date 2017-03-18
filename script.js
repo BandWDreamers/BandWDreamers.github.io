@@ -9,7 +9,26 @@ var db_url = {
   'port' : 80 
 }
 
-var locations_json = {};
+var locations_json = {
+  'locations' : []
+};
+
+function storeLocal()
+{
+  //Check for broweser support of local storage
+  if (typeof(Storage) != "undefinded")
+  {
+    for (var i = 0; i < locations_json.length; i++)
+    {
+      localStorage.setItem('locations_json'+i,locations_json[i]);
+    }
+  }
+  //Broswer does not support local storage
+  else
+  {
+    alert("Note: current browser does not support localstorage so data cannot be cached for later use");
+  }
+}
 
 //Gelocation api
 function geoLocate()

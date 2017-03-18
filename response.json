@@ -1,4 +1,15 @@
 {
-	"id":"123",
-	"timestamp":""
+	"locations" : 
+	[
+		{ 
+			"id" :"123",
+			"timestamp" : "1234",
+			"description" : "hello world"
+		},
+		{
+			"id" :"567",
+			"timestamp" : "5678",
+			"description" : "goodbye world"
+		}
+	]
 }
