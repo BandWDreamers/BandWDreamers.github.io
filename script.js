@@ -77,6 +77,7 @@ function getLocations()
 function storeLocations(object_response)
 {
   locations_json.locations = object_response.locations;
+  log('storeLocations',locations_json.locations);
 }
 
 //Google maps view
