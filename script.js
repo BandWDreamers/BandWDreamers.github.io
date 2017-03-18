@@ -91,9 +91,10 @@ function initMap()
   var markers = [];
   for (var i = 0; i < locations_json.locations; i++)
   {
-    var location = { lat: locations_json.location[i].lat, lng: locations_json.location[i].lng};
+    var location = { lat: locations_json.locations[i].lat, lng: locations_json.locations[i].lng};
     markers[i] = new google.maps.Marker({ position : location, map : map});
   }
+  log('initMap', locations_json.locations.length;);
   var contentString = '<div class="container">'+
     '<div class="row">'+
       '<div class="col-lg-12">'+
