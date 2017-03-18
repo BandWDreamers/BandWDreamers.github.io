@@ -86,7 +86,14 @@ function initMap()
   log('initMap', 'start')
   var uluru = {lat: position.latitude, lng: position.longitude};
   var map = new google.maps.Map(document.getElementById("map"), { zoom : 7, center : uluru });
+  getLocations();
   var marker = new google.maps.Marker({ position : uluru, map : map });
+  var markers = [];
+  for (var i = 0; i < locations_json.locations; i++)
+  {
+    var location = { lat: locations_json.location[i].lat, lng: locations_json.location[i].lng};
+    markers[i] = new google.maps.Marker({ position : location, map : map});
+  }
   var contentString = '<div class="container">'+
     '<div class="row">'+
       '<div class="col-lg-12">'+
@@ -102,7 +109,6 @@ function initMap()
   {
     infoWindow.open(map,marker);
   });
-  getLocations();
   log('initMap','end');
 }
 

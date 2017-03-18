@@ -4,11 +4,15 @@
 		{ 
 			"id" :"123",
 			"timestamp" : "1234",
+			"lat" : "72",
+			"lng" : "36",
 			"description" : "hello world"
 		},
 		{
 			"id" :"567",
 			"timestamp" : "5678",
+			"lat" : "72",
+			"lng" : "-36",
 			"description" : "goodbye world"
 		}
 	]
