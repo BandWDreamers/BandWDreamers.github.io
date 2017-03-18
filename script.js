@@ -61,7 +61,8 @@ function getLocations()
     if (request.status >= 200 && request.status < 400)
     {
       log('getLocations',request.responseText);
-      locations_json = request.responseText;
+      //locations_json = request.responseText;
+      storeLocations(JSON.parse(request.responseText));
     }
     else
       alert('request was denied by server');
@@ -71,6 +72,11 @@ function getLocations()
     alert('error sending request');
   }
   request.send();
+}
+
+function storeLocations(object_response)
+{
+  locations_json.locations = object_response.locations;
 }
 
 //Google maps view
