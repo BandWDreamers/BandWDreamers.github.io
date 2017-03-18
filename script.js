@@ -5,7 +5,7 @@ var position = {
 }
 
 var db_url = {
-  'ip' : './response.json',
+  'ip' : 'response.json',
   'port' : 80 
 }
 
